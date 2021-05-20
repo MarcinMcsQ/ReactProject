@@ -1,7 +1,11 @@
 import React from "react";
 
+import StoreProvider from "./store/StoreProvider";
+
 const App = () => {
-  return <div>Siema eniu</div>;
+  <StoreProvider>
+    <div>Siema eniu</div>
+  </StoreProvider>;
 };
 
 export default App;
