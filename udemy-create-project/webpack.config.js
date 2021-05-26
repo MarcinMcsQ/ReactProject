@@ -19,7 +19,7 @@ const SRC_html = __dirname + "/public";
 
 module.exports = {
   mode: { development },
-  entry: `./src/index.js`,
+  entry: `./src/store/index.js`,
   output: {
     path: DIST_DIR,
     publicPath: "/",
