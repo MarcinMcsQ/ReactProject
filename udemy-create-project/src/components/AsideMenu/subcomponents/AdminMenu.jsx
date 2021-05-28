@@ -12,11 +12,11 @@ const AdminMenu = ({ isUserLogged }) => (
     <nav>
       <ul>
         <li className={style("link")}>
-          <Link to="">Zarządzanie Marzeniami</Link>
+          <Link to="/manage-courses">Zarządzanie Marzeniami</Link>
         </li>
         {isUserLogged && (
           <li className={style("link")}>
-            <Link to="/manage-courses">Moje spełnione marzenia</Link>
+            <Link to="/my-courses">Moje spełnione marzenia</Link>
           </li>
         )}
       </ul>
