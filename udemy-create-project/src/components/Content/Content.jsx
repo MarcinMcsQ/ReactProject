@@ -3,6 +3,8 @@ import bemCssModules from "bem-css-modules";
 
 import { default as ContentStyles } from "./Content.module.scss";
 import { Redirect, Switch, Route } from "react-router-dom";
+
+import AdminPanel from "../AdminPanel/AdminPanel";
 import Courses from "../Courses/Courses";
 import UserCourses from "../UserCourses/UserCourses";
 import { StoreContext } from "../../store/StoreProvider";
@@ -24,11 +26,7 @@ const Content = () => {
           <Route exact path="/my-courses" render={() => <UserCourses />} />
         )}
         {isAdmin && (
-          <Route
-            exact
-            path="/manage-courses"
-            render={() => <p>Zarzadzanie marzeniami</p>}
-          />
+          <Route exact path="/manage-courses" render={() => <AdminPanel />} />
         )}
         <Redirect to="/" />
       </Switch>

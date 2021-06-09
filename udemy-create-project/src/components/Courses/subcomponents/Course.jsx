@@ -13,7 +13,7 @@ const Course = ({ authors, id, img, isUserContext = false, price, title }) => {
   const { user, setUser } = useContext(StoreContext);
   const history = useHistory();
 
-  const allAuthors = authors.join(",");
+  const allAuthors = authors.join(", ");
   // console.log(authors + "\n", img + "\n", price + "\n", title + "\n");
 
   const isUserLogged = Boolean(user);
